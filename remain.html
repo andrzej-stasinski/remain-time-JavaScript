@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Remain time</title>
+		<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+		<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		#wrapper {
+			width:500px;
+			background-color: #e5f2ff;
+			font-family: Monaco,'Courier New', monospace;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		.kontrolka {
+			width: 400px;
+			/* outline: 1px solid green; */
+			margin-top: 5px;
+			
+		}
+		.kontrolka label {
+			width:100px;
+			display: inline-block;
+			text-align: left;
+			/*outline: 1px solid red;*/
+		}
+		.kontrolka input {
+			width: 60px;
+		}
+		.kontrolka input[type="button"] {
+			/*margin-left:100px;*/
+
+		}
+		#czas_obliczony	{
+			font-size: 22px;
+			font-weight: bold;
+			color: #007fff;
+
+		}	
+		</style>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+
+		<div id="wrapper">
+			
+
+			<h3>Data aktualna</h3>
+			<div id="data_aktualna"></div>
+			<br>
+
+			<h3>Data ustawiona</h3>
+			<div id="data_ustalona"></div>
+
+			<h3>Ustaw nową datę:</h3>
+			<div class="kontrolka">
+				<label for="rok">Rok</label>
+				<input type="text" id="rok" value="2016"/>	
+				<span id="rok_valid"></span>
+			</div>
+			<div class="kontrolka">
+				<label for="msc">Miesiąc</label>
+				<input type="text" id="msc" value="1"/>
+				<span id="msc_valid"></span>
+			</div>
+			<div class="kontrolka">
+				<label for="dzien">Dzień</label>
+				<input type="text" id="dzien" value="1"/>
+				<span id="dzien_valid"></span>
+			</div>
+			<div class="kontrolka">
+				<label for="godzina">Godzina</label>
+				<input type="text" id="godzina" value="1"/>
+				<span id="godz_valid"></span>
+			</div>	
+			<br>		
+
+			<h3>Pozostało czasu</h3>
+			<div id="czas_obliczony"></div>
+
+		</div>
+
+		<br/>
+	</body>
+</html>
+
+
